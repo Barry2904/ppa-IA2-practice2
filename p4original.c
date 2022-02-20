@@ -26,7 +26,7 @@ int sum_composite(int n, int a[n])
     }
     if(count>2)
     sum=sum+a[i];
-    printf("%d \n",sum);
+    // printf("%d \n",sum);
   }
   return sum;
 }
