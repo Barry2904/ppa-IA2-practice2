@@ -6,7 +6,7 @@ void input_string(char *a)
 }
 int str_reverse(char *a)
 {
-  int i,l=0,j=0;
+  int i,l=0;
   for(i=0;a[i]!=0;i++)
     l=l+1;
   return l;
