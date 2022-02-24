@@ -58,7 +58,7 @@ output
 	<br> {
 	<br> 	float base,altitude,area;
 	<br> };
-	<brtypedef _triangle Triangle
+	<br> typedef _triangle Triangle
 	<br> Triangle input_triangle(); 
 	<br> void find_area(Traingle *t);
 	<br> void output(Triangle t);
