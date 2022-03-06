@@ -1,1 +1,38 @@
+(gdb) b main
+Breakpoint 1 at 0x80e: file p1original.c, line 19.
+(gdb) r
+Starting program: /home/runner/ppa-IA2-practice2/a.out 
+warning: Error disabling address space randomization: Operation not permitted
 
+Breakpoint 1, main () at p1original.c:19
+19  {
+(gdb) n
+21    input(&base,&height);
+(gdb) s
+input (base=0x7fff0657ddcc, height=0x7fff0657ddd0) at p1original.c:4
+4     printf("Enter base measurement:- ");
+(gdb) n
+5     scanf("%f",base);
+(gdb) n
+Enter base measurement:- 3
+6     printf("Enter height measurement:- ");
+(gdb) n
+7     scanf("%f",height);
+(gdb) n
+Enter height measurement:- 2
+8   }
+(gdb) n
+main () at p1original.c:22
+22    find_area(base,height,&area);
+(gdb) n
+23    output(base,height,area);
+(gdb) s
+output (base=3, height=2, area=3) at p1original.c:15
+15    float x=0.5;
+(gdb) n
+16    printf("Area of triangle is %.1f * %.2f * %.2f =%.2f",x,base,height,area);
+(gdb) n
+17  }
+(gdb) n
+main () at p1original.c:24
+24    return 0;

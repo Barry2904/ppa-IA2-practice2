@@ -1,1 +1,31 @@
 
+(gdb) b main
+Breakpoint 1 at 0x8ae: file p4original.c, line 38.
+(gdb) r
+Starting program: /home/runner/ppa-IA2-practice2/a.out 
+warning: Error disabling address space randomization: Operation not permitted
+
+Breakpoint 1, main () at p4original.c:38
+38  {
+(gdb) n
+40    n=input_array_size();
+(gdb) n
+How many numbers do you want to enter:- 5
+41    int a[n];
+(gdb) n
+42    input_array(n,a);
+(gdb) n
+Enter 1th number:- 5
+Enter 2th number:- 6
+Enter 3th number:- 3
+Enter 4th number:- 2
+Enter 5th number:- 6
+43    result=sum_composite(n,a);
+(gdb) n
+44    output(result);
+(gdb) s
+output (sum=17) at p4original.c:35
+35    printf("Sum of all composite numbers is %d",sum);
+(gdb) c
+Continuing.
+Sum of all composite numbers is 17

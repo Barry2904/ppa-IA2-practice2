@@ -1,1 +1,17 @@
 
+Breakpoint 1, main () at p5original.c:38
+38    a=input();
+(gdb) n
+Enter Number:- 34
+39    b=input();
+(gdb) 23
+Undefined command: "23".  Try "help".
+(gdb) n
+Enter Number:- 23
+40    r=gdc(a,b);
+(gdb) n
+41    output(a,b,r);
+(gdb) n
+42    return 0;
+(gdb) n
+43  }

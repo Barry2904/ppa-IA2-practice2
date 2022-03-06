@@ -1,1 +1,21 @@
+(gdb) b main
+Breakpoint 1 at 0x7f5: file p2original.c, line 36.
+(gdb) r
+Starting program: /home/runner/ppa-IA2-practice2/a.out 
+warning: Error disabling address space randomization: Operation not permitted
 
+Breakpoint 1, main () at p2original.c:36
+36    a=input_side();
+(gdb) n
+Enter side length:- n
+37    b=input_side();
+(gdb) n
+38    c=input_side();
+(gdb) n
+39    result=check_scalene(a,b,c);
+(gdb) n
+40    output(a,b,c,result);
+(gdb) n
+41    return 0;
+(gdb) n
+42  }
