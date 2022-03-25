@@ -4,39 +4,36 @@ void input_string(char *a)
   printf("Enter a string:- ");
   scanf("%s",a);
 }
-int str_reverse(char *a)
+int str_length(char *a)
 {
   int i,l=0;
-  for(i=0;a[i]!='\0';i++) //a=[e,h,t,y]
+  for(i=0;a[i]!='\0';i++) 
     l=l+1;
   return l;
 }
-void output(char *a,int reverse_a)
+char str_reverse(char *a,int length,char *temp)
 {
-  int i;
-  printf("The reverse of %s is ",a);
-  for(i=reverse_a-1;a[i]!='\0';i--)
-    printf("%c",a[i]);
+  int i,j=length-1;
+  for(i=0;a[i]!='\0';i++,j--)
+      temp[i]=a[j];
+}
+void output(char *temp,int length)
+{
+  // int i;
+  // printf("The reverse is ");
+  // for(i=0;temp[i]!='\0';i++)
+  //   printf("%c",temp[i]);
+  printf("%s",temp);
 }
 int main()
 {
-  int reverse_a;
+  int length;
+  char temp[30];
   char a[30];
   input_string(a);
-  reverse_a=str_reverse(a);
-  output(a,reverse_a);
+  length=str_length(a);
+  str_reverse(a,length,temp);
+  output(temp,length);
   return 0;
 }
 
-// #include <stdio.h>
-// #include <string.h>
-// int main()
-// {
-//   int i,l;
-//   char a[30];
-//   printf("Enter a string:- ");
-//   scanf("%s",a);
-//   l=strlen(a);
-//   for(i=l-1;a[i]!='\0';i--)
-//     printf("%c",a[i]);
-// }

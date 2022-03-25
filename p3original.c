@@ -2,7 +2,7 @@
 int input_number()
 {
   int x;
-  printf("Enetr number:- ");
+  printf("Enter number:- ");
   scanf("%d",&x);
   return x;
 }
